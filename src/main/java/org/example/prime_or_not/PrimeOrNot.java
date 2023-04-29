@@ -1,0 +1,21 @@
+package org.example.prime_or_not;
+
+public class PrimeOrNot {
+    public static void main(String[] args) {
+        int n=23;
+        checkPrime(n);
+    }
+    private static void checkPrime(int n){
+        int count=0;
+        if(n<2)
+            System.out.println(":"+n+":not prime");
+        for (int i=1; i<=n; i++){
+            if(n%i==0)
+                count+=i;
+        }
+        if(count>2)
+            System.out.println(""+n+":prime");
+        else
+            System.out.println(""+n+":not prime");
+    }
+}
